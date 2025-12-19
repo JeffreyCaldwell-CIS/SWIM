@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WIMS", "WIMS.csproj", "{196496E5-29E7-E528-295F-316704B00BCD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{196496E5-29E7-E528-295F-316704B00BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{196496E5-29E7-E528-295F-316704B00BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{196496E5-29E7-E528-295F-316704B00BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{196496E5-29E7-E528-295F-316704B00BCD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CCF6C1D4-C049-4771-B7C4-79EE8D110116}
+	EndGlobalSection
+EndGlobal

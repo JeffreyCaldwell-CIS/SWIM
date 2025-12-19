@@ -1,0 +1,40 @@
+{
+  "coolers": [
+    {
+      "id": "CRAC-1",
+      "mode": "Auto",
+      "setPointC": 22.0,
+      "currentTempC": 23.5,
+      "fanSpeedPercent": 65,
+      "operationalState": "Normal",
+      "lastServiceDate": "2025-09-15"
+    },
+    {
+      "id": "CRAC-2",
+      "mode": "Auto",
+      "setPointC": 22.0,
+      "currentTempC": 27.8,
+      "fanSpeedPercent": 90,
+      "operationalState": "Warning",
+      "lastServiceDate": "2025-04-02"
+    },
+    {
+      "id": "CRAC-3",
+      "mode": "Manual",
+      "setPointC": 20.0,
+      "currentTempC": 21.1,
+      "fanSpeedPercent": 50,
+      "operationalState": "Normal",
+      "lastServiceDate": "2025-11-01"
+    },
+    {
+      "id": "CRAC-4",
+      "mode": "Off",
+      "setPointC": 24.0,
+      "currentTempC": 30.0,
+      "fanSpeedPercent": 0,
+      "operationalState": "Fault",
+      "lastServiceDate": "2024-12-10"
+    }
+  ]
+}

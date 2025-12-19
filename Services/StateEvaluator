@@ -1,0 +1,24 @@
+using SWIM.Models;
+
+namespace SWIM.Services
+{
+    public class StateEvaluator
+    {
+        public SystemState Evaluate(
+            SystemState currentState,
+            SensorSnap snap)
+        {
+            // Placeholder thresholds (we will refine)
+            if (snap.TemperatureF >= 200)
+                return SystemState.Danger;
+
+            if (snap.TemperatureF >= 170)
+                return SystemState.Critical;
+
+            if (snap.TemperatureF >= 140)
+                return SystemState.Warning;
+
+            return SystemState.Normal;
+        }
+    }
+}

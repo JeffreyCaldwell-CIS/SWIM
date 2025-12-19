@@ -1,0 +1,13 @@
+using System;
+
+namespace SWIM.Models
+{
+    
+    public enum SystemState
+    {
+        Normal,
+        Warning,
+        Critical,
+        Danger
+    }
+}

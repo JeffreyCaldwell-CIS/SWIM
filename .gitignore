@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+
+# Build output
+bin/
+obj/
+
+# IDE
+.vs/
+.vscode/
+
+# Environment
+.env
+

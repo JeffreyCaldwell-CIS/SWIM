@@ -1,0 +1,40 @@
+{
+  "servers": [
+    {
+      "name": "SRV-01",
+      "rack": "RACK-A",
+      "uPosition": 10,
+      "cpuLoadPercent": 37.5,
+      "memoryUsedGB": 48,
+      "memoryTotalGB": 64,
+      "storageUsedTB": 3.2,
+      "storageTotalTB": 8.0,
+      "temperatureC": 42.3,
+      "status": "Online"
+    },
+    {
+      "name": "SRV-02",
+      "rack": "RACK-A",
+      "uPosition": 14,
+      "cpuLoadPercent": 82.1,
+      "memoryUsedGB": 60,
+      "memoryTotalGB": 64,
+      "storageUsedTB": 7.1,
+      "storageTotalTB": 8.0,
+      "temperatureC": 65.0,
+      "status": "Warning"
+    },
+    {
+      "name": "SRV-03",
+      "rack": "RACK-B",
+      "uPosition": 5,
+      "cpuLoadPercent": 12.4,
+      "memoryUsedGB": 16,
+      "memoryTotalGB": 32,
+      "storageUsedTB": 0.9,
+      "storageTotalTB": 4.0,
+      "temperatureC": 38.7,
+      "status": "Online"
+    }
+  ]
+}

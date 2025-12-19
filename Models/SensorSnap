@@ -1,0 +1,10 @@
+using System; 
+
+namespace SWIM.Models
+{
+    public record SensorSnapshot(
+        double TemperatureF,
+        double RateOfChangeFPerMin,
+        DateTime Timestamp
+    );
+}
