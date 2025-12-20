@@ -35,6 +35,20 @@
       "storageTotalTB": 4.0,
       "temperatureC": 38.7,
       "status": "Online"
+    },
+    {
+        "name": "SRV-04",
+      "rack": "RACK-A",
+      "uPosition": 8,
+      "cpuLoadPercent": 12.0,
+      "memoryUsedGB": 16,
+      "memoryTotalGB": 64,
+      "storageUsedTB": 2.9,
+      "storageTotalTB": 4.0,
+      "temperatureC": 45.7,
+      "status": "Online"
     }
+
+  
   ]
 }

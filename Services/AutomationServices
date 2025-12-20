@@ -1,0 +1,21 @@
+using System.Diagnostics;
+using SWIM.Services;
+
+public static class AutomationService
+{
+    public static void InvokeStateAction(string state)
+    {
+        ProcessStartInfo psi = new ProcessStartInfo
+        {
+            FileName = "/bin/bash",
+            Arguments = $"/path/to/swim.sh {state}",
+            RedirectStandardOutput = true,
+            UseShellExecute = false,
+            CreateNoWindow = true
+        };
+
+        Process process = Process.Start(psi);
+        string output = process.StandardOutput.ReadToEnd();
+        process.WaitForExit();
+    }
+}

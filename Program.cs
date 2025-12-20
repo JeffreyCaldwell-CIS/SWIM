@@ -3,6 +3,7 @@
 
 
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Text.Json;
 using Models;
@@ -57,6 +58,7 @@ class Program
 
         Console.WriteLine("\n=== WIMS INITIALIZATION COMPLETE ===");*/
     }
+
 
         
 }
