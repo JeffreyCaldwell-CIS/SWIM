@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 87kmKI8roV9hfSzwgcFMVjMTQB2UoYKUrRpNYRb6NEkS8QKhc6vgfbTRi7HR5GW
+\restrict LTi0JCZkI6ZGycXwiY4xedDjhWRFOS1ggAeKsb3xuQLZZdCiPlLRNSFQjhPebzA
 
 -- Dumped from database version 18.1 (Postgres.app)
 -- Dumped by pg_dump version 18.1 (Postgres.app)
@@ -41,7 +41,8 @@ ALTER TABLE public.audit_logs OWNER TO programmingtruckdriver;
 CREATE TABLE public.crac (
     crac_id integer NOT NULL,
     zone character varying(25),
-    server_id integer
+    server_id integer,
+    rack_id integer
 );
 
 
@@ -124,7 +125,9 @@ ALTER SEQUENCE public.rack_rack_id_seq OWNED BY public.rack.rack_id;
 
 CREATE TABLE public.sensor (
     sensor_id bigint NOT NULL,
-    temp_hist character varying(100) NOT NULL
+    temp_hist character varying(100) NOT NULL,
+    crac_id integer,
+    rack_id integer
 );
 
 
@@ -157,8 +160,8 @@ ALTER SEQUENCE public.sensor_sensor_id_seq OWNED BY public.sensor.sensor_id;
 
 CREATE TABLE public.server (
     server_id bigint NOT NULL,
-    rack character(25),
-    "position" character(25)
+    "position" character(25),
+    rack_id integer
 );
 
 
@@ -246,6 +249,38 @@ ALTER TABLE ONLY public.server
 
 
 --
+-- Name: sensor fk_crac; Type: FK CONSTRAINT; Schema: public; Owner: programmingtruckdriver
+--
+
+ALTER TABLE ONLY public.sensor
+    ADD CONSTRAINT fk_crac FOREIGN KEY (crac_id) REFERENCES public.crac(crac_id);
+
+
+--
+-- Name: crac fk_crac_rack; Type: FK CONSTRAINT; Schema: public; Owner: programmingtruckdriver
+--
+
+ALTER TABLE ONLY public.crac
+    ADD CONSTRAINT fk_crac_rack FOREIGN KEY (rack_id) REFERENCES public.rack(rack_id);
+
+
+--
+-- Name: sensor fk_sensor_rack; Type: FK CONSTRAINT; Schema: public; Owner: programmingtruckdriver
+--
+
+ALTER TABLE ONLY public.sensor
+    ADD CONSTRAINT fk_sensor_rack FOREIGN KEY (rack_id) REFERENCES public.rack(rack_id);
+
+
+--
+-- Name: server fk_server_rack; Type: FK CONSTRAINT; Schema: public; Owner: programmingtruckdriver
+--
+
+ALTER TABLE ONLY public.server
+    ADD CONSTRAINT fk_server_rack FOREIGN KEY (rack_id) REFERENCES public.rack(rack_id);
+
+
+--
 -- Name: crac fk_servers; Type: FK CONSTRAINT; Schema: public; Owner: programmingtruckdriver
 --
 
@@ -257,5 +292,5 @@ ALTER TABLE ONLY public.crac
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 87kmKI8roV9hfSzwgcFMVjMTQB2UoYKUrRpNYRb6NEkS8QKhc6vgfbTRi7HR5GW
+\unrestrict LTi0JCZkI6ZGycXwiY4xedDjhWRFOS1ggAeKsb3xuQLZZdCiPlLRNSFQjhPebzA
 
